@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rufaro | WDD 231 Course Home</title>
+    <meta
+      name="description"
+      content="Course home page for Rufaro's WDD 231 Web Frontend Development I work, including the Web and Computer Programming certificate course list."
+    />
+    <meta name="author" content="Rufaro" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="images/logo.svg" alt="" width="48" height="48" />
+        <span class="name">Rufaro</span>
+      </div>
+      <button
+        id="menu-button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        &#9776;
+      </button>
+      <nav aria-label="Main navigation">
+        <ul id="primary-nav">
+          <li>
+            <a href="index.html" class="active" aria-current="page">Home</a>
+          </li>
+          <li><a href="chamber/index.html">Chamber</a></li>
+          <li><a href="final/index.html">Final</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Home</h1>
+
+      <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Rufaro. I hold a master's degree in strategic management and
+          I'm studying web and computer programming through BYU-Pathway. I build
+          independent software projects alongside my coursework, and my goal is
+          to grow into a data or business analyst role.
+        </p>
+        <p>
+          This site is my home base for WDD 231: Web Frontend Development I.
+        </p>
+      </section>
+
+      <section id="courses" class="courses">
+        <h2>Certificate: Web and Computer Programming</h2>
+        <div
+          class="filters"
+          role="group"
+          aria-label="Filter courses by subject"
+        >
+          <button
+            type="button"
+            data-filter="all"
+            class="active"
+            aria-pressed="true"
+          >
+            All Courses
+          </button>
+          <button type="button" data-filter="WDD" aria-pressed="false">
+            WDD Courses
+          </button>
+          <button type="button" data-filter="CSE" aria-pressed="false">
+            CSE Courses
+          </button>
+        </div>
+        <p class="credits" aria-live="polite">
+          Total credits for courses listed: <span id="total-credits">0</span>
+        </p>
+        <ul id="course-list" class="course-list"></ul>
+      </section>
+
+      <section id="goals" class="goals">
+        <h2>My Goals</h2>
+        <ul>
+          <li>Complete the first certificate in December.</li>
+          <li>Build a responsive, accessible Chamber of Commerce website.</li>
+          <li>
+            Keep growing my SQL, Python and Excel skills for data analysis.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social">
+        <a
+          href="https://github.com/yourgithubusername/wdd231"
+          aria-label="GitHub"
+          ><img src="images/github.svg" alt="" width="32" height="32"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/your-linkedin/"
+          aria-label="LinkedIn"
+          ><img src="images/linkedin.svg" alt="" width="32" height="32"
+        /></a>
+        <a href="https://www.youtube.com/" aria-label="YouTube"
+          ><img src="images/youtube.svg" alt="" width="32" height="32"
+        /></a>
+      </div>
+      <p>
+        &copy; <span id="currentyear"></span> Rufaro &#124; Harare in Zimbabwe
+      </p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>
