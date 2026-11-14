@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="Jacaranda Roast logo">
+  <rect width="300" height="200" fill="#5b2d8e"/>
+  <circle cx="150" cy="82" r="52" fill="none" stroke="#f2b632" stroke-width="5"/>
+  <text x="150" y="98" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#f2b632" text-anchor="middle">JR</text>
+  <text x="150" y="172" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Jacaranda Roast</text>
+</svg>

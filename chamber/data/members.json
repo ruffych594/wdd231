@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Jacaranda Roast Coffee House",
+    "address": "22 Sam Nujoma Street, Avondale, Harare",
+    "phone": "+263 242 700 211",
+    "website": "https://www.jacarandaroast.co.zw",
+    "image": "jacaranda-roast.svg",
+    "membershipLevel": 3,
+    "category": "Food & Drink",
+    "description": "Locally roasted Zimbabwean coffee, fresh bakes and a quiet place to meet."
+  },
+  {
+    "name": "Kopje Tech Solutions",
+    "address": "8 Jason Moyo Avenue, Harare CBD",
+    "phone": "+263 242 700 322",
+    "website": "https://www.kopjetech.co.zw",
+    "image": "kopje-tech.svg",
+    "membershipLevel": 3,
+    "category": "Technology",
+    "description": "Software, data analytics and IT support for small and growing businesses."
+  },
+  {
+    "name": "Sunshine City Logistics",
+    "address": "115 Simon Mazorodze Road, Southerton, Harare",
+    "phone": "+263 242 700 433",
+    "website": "https://www.sunshinecitylogistics.co.zw",
+    "image": "sunshine-logistics.svg",
+    "membershipLevel": 2,
+    "category": "Transport",
+    "description": "Same-day courier and regional freight across Zimbabwe and the SADC region."
+  },
+  {
+    "name": "Borrowdale Fresh Market",
+    "address": "64 Borrowdale Road, Borrowdale, Harare",
+    "phone": "+263 242 700 544",
+    "website": "https://www.borrowdalefresh.co.zw",
+    "image": "borrowdale-fresh.svg",
+    "membershipLevel": 2,
+    "category": "Retail",
+    "description": "Farm-fresh fruit, vegetables and groceries sourced from local growers."
+  },
+  {
+    "name": "Mbira Craft Studio",
+    "address": "3 Enterprise Road, Newlands, Harare",
+    "phone": "+263 242 700 655",
+    "website": "https://www.mbiracraft.co.zw",
+    "image": "mbira-craft.svg",
+    "membershipLevel": 1,
+    "category": "Arts & Crafts",
+    "description": "Handmade mbira, stone sculpture and gifts by Zimbabwean artists."
+  },
+  {
+    "name": "Msasa Builders & Hardware",
+    "address": "41 Mutare Road, Msasa, Harare",
+    "phone": "+263 242 700 766",
+    "website": "https://www.msasabuilders.co.zw",
+    "image": "msasa-builders.svg",
+    "membershipLevel": 1,
+    "category": "Construction",
+    "description": "Building materials, tools and contractor services for home and business."
+  },
+  {
+    "name": "Highveld Accounting Partners",
+    "address": "90 Nelson Mandela Avenue, Harare CBD",
+    "phone": "+263 242 700 877",
+    "website": "https://www.highveldaccounting.co.zw",
+    "image": "highveld-accounting.svg",
+    "membershipLevel": 3,
+    "category": "Professional Services",
+    "description": "Bookkeeping, tax and business advisory for entrepreneurs and SMEs."
+  },
+  {
+    "name": "Mukuvisi Eco Tours",
+    "address": "Glenara Avenue South, Hillside, Harare",
+    "phone": "+263 242 700 988",
+    "website": "https://www.mukuvisiecotours.co.zw",
+    "image": "mukuvisi-tours.svg",
+    "membershipLevel": 2,
+    "category": "Tourism",
+    "description": "Guided woodland walks, birding and day trips around Harare."
+  }
+]

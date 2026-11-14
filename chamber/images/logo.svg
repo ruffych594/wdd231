@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Harare Chamber of Commerce">
+  <circle cx="32" cy="32" r="30" fill="#f2b632"/>
+  <circle cx="32" cy="32" r="25" fill="#3d2259"/>
+  <path d="M20 18h6v11h12V18h6v28h-6V35H26v11h-6z" fill="#ffffff"/>
+</svg>

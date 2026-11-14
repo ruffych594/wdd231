@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harare Chamber of Commerce | Business Directory</title>
+    <meta name="description"
+        content="Browse the member directory of the Harare Chamber of Commerce and find trusted local businesses across Zimbabwe's capital city.">
+    <meta name="author" content="Rufaro Chirume">
+
+    <!-- Facebook / Open Graph -->
+    <meta property="og:title" content="Harare Chamber of Commerce | Business Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Browse the member directory of the Harare Chamber of Commerce and find trusted local businesses across Zimbabwe's capital city.">
+    <meta property="og:image" content="https://ruffych594.github.io/wdd231/chamber/images/og-directory.png">
+    <meta property="og:url" content="https://ruffych594.github.io/wdd231/chamber/directory.htm
+    <link rel="icon" href="images/favicon.ico" sizes="32x32">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="56" height="56">
+                <span class="brand-text">
+                    <span class="brand-name">Harare</span>
+                    <span class="brand-sub">Chamber of Commerce</span>
+                </span>
+            </a>
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="primary-nav"></button>
+        </div>
+        <nav id="primary-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Business Directory</h1>
+        <p class="intro">Meet the members of the Harare Chamber of Commerce.</p>
+
+        <div class="view-toggle" role="group" aria-label="Choose how members are displayed">
+            <button id="grid-button" type="button" class="selected" aria-pressed="true">Grid</button>
+            <button id="list-button" type="button" aria-pressed="false">List</button>
+        </div>
+
+        <section id="members" class="grid" aria-label="Chamber members" aria-live="polite"></section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <section class="footer-contact">
+                <h2>Harare Chamber of Commerce</h2>
+                <p>14 Samora Machel Avenue</p>
+                <p>Harare, Zimbabwe</p>
+                <p><a href="mailto:info@hararechamber.example">info@hararechamber.example</a></p>
+                <p><a href="tel:+263242700100">+263 242 700 100</a></p>
+            </section>
+
+            <section class="footer-social" aria-label="Social media">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                    <img src="images/facebook.svg" alt="Facebook" width="36" height="36" loading="lazy">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                    <img src="images/youtube.svg" alt="YouTube" width="36" height="36" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="36" height="36" loading="lazy">
+                </a>
+            </section>
+
+            <section class="footer-dev">
+                <p>WDD 231</p>
+                <p>Rufaro Chirume</p>
+                <p>&copy; <span id="current-year"></span> Harare Chamber of Commerce</p>
+                <p id="last-modified"></p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

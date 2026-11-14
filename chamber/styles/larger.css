@@ -1,0 +1,94 @@
+/* Harare Chamber of Commerce: adjustments for wider screens */
+
+@media (min-width: 640px) {
+
+    /* Header: logo on the left, navigation on the right */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+
+    .header-inner {
+        padding: 0.75rem 0;
+    }
+
+    .brand img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .brand-name {
+        font-size: 1.5rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav,
+    nav.open {
+        display: block;
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+        border-bottom: none;
+        border-radius: 6px;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    /* Grid view: two cards per row */
+    #members.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* List view: one line per member */
+    .list .member-card {
+        grid-template-columns: 2fr 5.5rem 2.5fr 1.5fr 2fr;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .list .member-card h2 {
+        font-size: 1rem;
+    }
+
+    .list .level {
+        justify-self: center;
+    }
+
+    /* Footer: three columns */
+    .footer-inner {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 2rem 1.5rem;
+        text-align: left;
+    }
+
+    .footer-dev {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    /* Grid view: three cards per row */
+    #members.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
