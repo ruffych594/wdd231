@@ -3,129 +3,184 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rufaro Chirume | WDD 231 Course Home</title>
+    <title>Harare Chamber of Commerce | Home</title>
     <meta
       name="description"
-      content="Course home page for Rufaro's WDD 231 Web Frontend Development I work, including the Web and Computer Programming certificate course list."
+      content="The Harare Chamber of Commerce connects and grows local businesses in Zimbabwe's capital city through events, networking, and member spotlights."
     />
     <meta name="author" content="Rufaro Chirume" />
+
+    <!-- Facebook / Open Graph -->
+    <meta property="og:title" content="Harare Chamber of Commerce | Home" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="The Harare Chamber of Commerce connects and grows local businesses in Zimbabwe's capital city through events, networking, and member spotlights."
+    />
+    <meta
+      property="og:image"
+      content="https://ruffych594.github.io/wdd231/chamber/images/og-home.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://ruffych594.github.io/wdd231/chamber/index.html"
+    />
+    <link rel="icon" href="images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/home.css" />
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
   </head>
+
   <body>
     <header>
-      <div class="brand">
-        <img src="images/logo.svg" alt="" width="48" height="48" />
-        <span class="name">Rufaro</span>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img
+            src="images/logo.svg"
+            alt="Harare Chamber of Commerce logo"
+            width="56"
+            height="56"
+          />
+          <span class="brand-text">
+            <span class="brand-name">Harare</span>
+            <span class="brand-sub">Chamber of Commerce</span>
+          </span>
+        </a>
+        <button
+          id="menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        ></button>
       </div>
-      <button
-        id="menu-button"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-        aria-label="Toggle navigation menu"
-      >
-        &#9776;
-      </button>
-      <nav aria-label="Main navigation">
-        <ul id="primary-nav">
-          <li>
-            <a href="index.html" class="active" aria-current="page">Home</a>
-          </li>
-          <li><a href="chamber/index.html">Chamber</a></li>
-          <li><a href="final/index.html">Final</a></li>
+      <nav id="primary-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h1>Home</h1>
-
-      <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-          Hi, I'm Rufaro. I hold a master's degree in strategic management and
-          I'm studying web and computer programming through BYU-Pathway. I build
-          independent software projects alongside my coursework, and my goal is
-          to grow into a data or business analyst role.
-        </p>
-        <p>
-          This site is my home base for WDD 231: Web Frontend Development I.
-        </p>
-      </section>
-
-      <section id="courses" class="courses">
-        <h2>Certificate: Web and Computer Programming</h2>
-        <div
-          class="filters"
-          role="group"
-          aria-label="Filter courses by subject"
-        >
-          <button
-            type="button"
-            data-filter="all"
-            class="active"
-            aria-pressed="true"
-          >
-            All Courses
-          </button>
-          <button type="button" data-filter="WDD" aria-pressed="false">
-            WDD Courses
-          </button>
-          <button type="button" data-filter="CSE" aria-pressed="false">
-            CSE Courses
-          </button>
+    <main class="home">
+      <section class="hero">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/hero-small.webp" />
+          <img
+            src="images/hero-large.webp"
+            alt="Office buildings and palm trees along Kwame Nkrumah Avenue in central Harare at dusk"
+            width="1200"
+            height="600"
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="hero-content">
+          <h1>Grow Your Business in Harare</h1>
+          <a href="join.html" class="cta">Join the Chamber</a>
         </div>
-        <p class="credits" aria-live="polite">
-          Total credits for courses listed: <span id="total-credits">0</span>
-        </p>
-        <ul id="course-list" class="course-list"></ul>
       </section>
 
-      <section id="goals" class="goals">
-        <h2>My Goals</h2>
-        <ul>
-          <li>Complete the first certificate in December.</li>
-          <li>Build a responsive, accessible Chamber of Commerce website.</li>
-          <li>
-            Keep growing my SQL, Python and Excel skills for data analysis.
-          </li>
-        </ul>
+      <div class="home-grid">
+        <section class="home-card events" aria-labelledby="events-heading">
+          <h2 id="events-heading">Current Events</h2>
+          <ul class="event-list">
+            <li>
+              <p class="event-date">28 Nov 2026</p>
+              <h3>Business Networking Breakfast</h3>
+              <p>Meet fellow members at Meikles Hotel, 07:30. Bring business cards!</p>
+            </li>
+            <li>
+              <p class="event-date">05 Dec 2026</p>
+              <h3>SME Digital Marketing Workshop</h3>
+              <p>Learn to grow your online presence. Chamber boardroom, 10:00.</p>
+            </li>
+            <li>
+              <p class="event-date">12 Dec 2026</p>
+              <h3>End-of-Year Members' Gala</h3>
+              <p>Celebrate the year with Harare's business community. Tickets coming soon.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="home-card weather" aria-labelledby="weather-heading">
+          <h2 id="weather-heading">Current Weather</h2>
+          <div class="weather-now">
+            <img
+              id="weather-icon"
+              src="images/weather-placeholder.svg"
+              alt=""
+              width="80"
+              height="80"
+            />
+            <div>
+              <p><span id="current-temp" class="temp">--</span></p>
+              <p id="weather-desc" class="desc">Loading…</p>
+            </div>
+          </div>
+          <h3>3-Day Forecast</h3>
+          <ul id="forecast" class="forecast"></ul>
+        </section>
+      </div>
+
+      <section class="spotlights" aria-labelledby="spotlight-heading">
+        <h2 id="spotlight-heading">Member Spotlights</h2>
+        <div id="spotlight-container" class="spotlight-grid"></div>
       </section>
     </main>
 
     <footer>
-      <div class="social">
-        <a
-          href="https://github.com/yourgithubusername/wdd231"
-          aria-label="GitHub"
-          ><img src="images/github.svg" alt="" width="32" height="32"
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/your-linkedin/"
-          aria-label="LinkedIn"
-          ><img src="images/linkedin.svg" alt="" width="32" height="32"
-        /></a>
-        <a href="https://www.youtube.com/" aria-label="YouTube"
-          ><img src="images/youtube.svg" alt="" width="32" height="32"
-        /></a>
+      <div class="footer-inner">
+        <section class="footer-contact">
+          <h2>Harare Chamber of Commerce</h2>
+          <p>14 Samora Machel Avenue</p>
+          <p>Harare, Zimbabwe</p>
+          <p>
+            <a href="mailto:info@hararechamber.example"
+              >info@hararechamber.example</a
+            >
+          </p>
+          <p><a href="tel:+263242700100">+263 242 700 100</a></p>
+        </section>
+
+        <section class="footer-social" aria-label="Social media">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+            <img src="images/facebook.svg" alt="Facebook" width="36" height="36" loading="lazy" />
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+            <img src="images/youtube.svg" alt="YouTube" width="36" height="36" loading="lazy" />
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <img src="images/linkedin.svg" alt="LinkedIn" width="36" height="36" loading="lazy" />
+          </a>
+        </section>
+
+        <section class="footer-dev">
+          <p>WDD 231</p>
+          <p>Rufaro Chirume</p>
+          <p>
+            &copy; <span id="current-year"></span> Harare Chamber of Commerce
+          </p>
+          <p id="last-modified"></p>
+          <p>Hero photo: Tatenda Mapigoti on Unsplash</p>
+        </section>
       </div>
-      <p>
-        &copy; <span id="currentyear"></span> Rufaro Chirume &#124; Harare in
-        Zimbabwe
-      </p>
-      <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
   </body>
 </html>
