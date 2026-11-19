@@ -1,0 +1,147 @@
+/* ===== Home page only — loads after small.css and larger.css =====
+   Uses the site colour variables defined in small.css. */
+.home {
+  --home-primary: var(--primary);   /* deep purple */
+  --home-dark: var(--dark);         /* dark text on gold */
+  --home-accent: var(--accent);     /* gold */
+  --home-muted: #5a5160;            /* secondary text */
+  --home-radius: 10px;
+  --home-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ----- Hero ----- */
+.hero {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover; /* scales without distortion */
+  border-radius: var(--home-radius);
+}
+
+.hero-content {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.85));
+  border-radius: 0 0 var(--home-radius) var(--home-radius);
+  color: #fff;
+}
+
+.hero h1 {
+  margin: 0 0 0.6rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--home-accent);
+  color: var(--home-dark);
+  font-weight: 700;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--home-radius);
+  text-decoration: none;
+  box-shadow: var(--home-shadow);
+}
+.cta:hover,
+.cta:focus-visible {
+  background: var(--surface);
+}
+
+/* ----- Cards (repeated look for proximity and repetition) ----- */
+.home-card,
+.spotlight {
+  background: var(--surface);
+  border-radius: var(--home-radius);
+  box-shadow: var(--home-shadow);
+  padding: 1rem 1.25rem;
+}
+
+.home-card h2,
+.spotlights h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--home-accent);
+  color: var(--home-primary);
+  font-size: 1.3rem;
+}
+
+.home-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ----- Events ----- */
+.event-list { list-style: none; margin: 0; padding: 0; }
+.event-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+.event-list li:last-child { border-bottom: none; }
+.event-list h3 { margin: 0.1rem 0; font-size: 1.05rem; }
+.event-list p { margin: 0; color: var(--home-muted); }
+.event-list .event-date { font-weight: 600; color: var(--home-primary); font-size: 0.9rem; }
+
+/* ----- Weather ----- */
+.weather-now { display: flex; align-items: center; gap: 1rem; }
+.weather-now p { margin: 0; }
+.temp { font-size: 2.2rem; font-weight: 700; color: var(--home-primary); }
+.desc { text-transform: capitalize; color: var(--home-muted); }
+.weather h3 { margin: 1rem 0 0.5rem; font-size: 1.05rem; }
+
+.forecast {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+.forecast li { background: var(--tint); border-radius: 8px; padding: 0.5rem; }
+.forecast .day { display: block; font-weight: 600; color: var(--home-primary); }
+
+/* ----- Spotlights ----- */
+.spotlights { margin-bottom: 2rem; }
+.spotlight-grid { display: grid; gap: 1.25rem; }
+
+.spotlight { text-align: center; }
+.spotlight h3 { margin: 0 0 0.5rem; color: var(--home-primary); }
+.spotlight img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0.5rem auto;
+}
+.spotlight p { margin: 0.25rem 0; }
+.spotlight a { color: var(--home-primary); }
+
+.badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.badge.gold   { background: var(--home-accent); color: var(--home-dark); }
+.badge.silver { background: var(--silver); color: var(--home-dark); }
+
+/* ----- Larger screens: the main layout changes ----- */
+@media (min-width: 768px) {
+  .hero img { aspect-ratio: 5 / 2; }
+  .hero-content {
+    inset: auto auto 2rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: var(--home-radius);
+    padding: 1.25rem 1.5rem;
+  }
+  .hero h1 { font-size: 2rem; }
+
+  .home-grid { grid-template-columns: 3fr 2fr; }
+  .spotlight-grid { grid-template-columns: repeat(3, 1fr); }
+}
